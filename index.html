@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<style>
+		section>section {
+			margin-top: 0;
+		}
+
+		.alert {
+			color: #712;
+			border: 1px solid #712;
+			border-radius: 5px;
+			padding: 0.5em;
+		}
+
+		.stacked {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			background-size: cover;
+			height: 300px;
+			width: 200px;
+		}
+
+		.galleryContainer {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 1.5em;
+		}
+
+		.galleryImage {
+			height: 300px;
+			width: 33%;
+			margin-left: 1em;
+			margin-bottom: 1em;
+		}
+
+		.galleryImage>* {
+			background-size: cover;
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>Astrophotografie</section>
+
+			<!--Chapter 1-->
+			<section>
+
+				<section>
+					<!--Wer sind wir etc...-->
+					Hallo :)
+				</section>
+
+				<section data-background-color="black" data-background-image="assets/data/all-sky/panoramaS.jpg"
+					data-background-size="contain">
+					Was gibts am Himmel zu sehen?
+				</section>
+
+				<section data-background-video="assets/data/clouds/clouds.mp4" data-background-video-loop="true"
+					data-background-size="cover" data-background-video-muted="true">
+					Wolken
+				</section>
+
+				<!--Satelliten-->
+				<section data-background-video="assets/data/starlink/starlink.mp4" data-background-video-loop="true"
+					data-background-size="cover" data-background-video-muted="true">
+					Satelliten</section>
+
+				<!--ISS-->
+				<section data-background-video="assets/data/iss/iss.mp4" data-background-video-loop="true"
+					data-background-size="cover" data-background-video-muted="true">
+					Satelliten</section>
+
+				<section>Sternschnuppen</section>
+
+				<section data-background-video="assets/data/neowise/video.mp4" data-background-video-loop="true"
+					data-background-size="cover" data-background-video-muted="true">
+					Neowise</section>
+
+				<section data-auto-animate data-background-image="assets/data/neowise/neowise.jpg"
+					data-background-size="cover"></section>
+
+				<section>Mond</section>
+
+				<section data-background-image="assets/data/sun-path/sun.jpg" data-background-size="cover">
+					Sonnenlauf</section>
+
+				<section data-background-image="assets/data/sun/full_disk.png" data-background-size="contain"
+					data-background-color="black">
+					Sonne
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade" data-background-color="black">
+					Sonne
+					<div class="galleryContainer">
+						<a class="galleryImage" href="assets/data/sun/sun_detail2.jpg">
+							<div style="background-image:url('assets/data/sun/sun_detail2.jpg')"></div>
+						</a>
+						<a class="galleryImage" href="assets/data/sun/sun_detail1.jpg">
+							<div style="background-image:url('assets/data/sun/sun_detail1.jpg')"></div>
+						</a>
+					</div>
+
+					<div class="alert">*Hier Sonnenwarnung einfügen*</div>
+				</section>
+
+				<section>
+					Sonnenfinsternis
+					<video style="width:50%; height:50%" autoplay loop>
+						<source src="assets/data/sun/sun.mp4" type="video/mp4">
+					</video>
+				</section>
+
+				<section>Planeten</section>
+
+
+				<section>Deep Space (Galaxien), Nebel (Milchstraße, Andromeda, etc.)</section>
+				<section>Deep Space (Galaxien), Nebel (Milchstraße, Andromeda, etc.)</section>
+
+			</section>
+
+			<section>
+				<!--Chapter 2-->
+				<h1>Was kann ich tun?</h1>
+				<section>Smartphone/Kamera + Stativ</section>
+				<section>Startracker</section>
+				<section>Teleskop</section>
+				<section>Satellitenteleskop ☺</section>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
