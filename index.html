@@ -31,14 +31,14 @@
 		.galleryContainer {
 			display: flex;
 			flex-direction: row;
-			flex-wrap: wrap;
+			flex-wrap: nowrap;
 			justify-content: center;
 			align-items: center;
 			margin-top: 1.5em;
 		}
 
-		.galleryImage {
-			height: 300px;
+		.galleryImage,.galleryImageContained {
+			height: 400px;
 			width: 33%;
 			margin-left: 1em;
 			margin-bottom: 1em;
@@ -46,6 +46,17 @@
 
 		.galleryImage>* {
 			background-size: cover;
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.galleryImageContained>*{
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: black;
 			height: 100%;
 			width: 100%;
 			margin: 0;
@@ -92,7 +103,7 @@
 				<!--ISS-->
 				<section data-background-video="assets/data/iss/iss.mp4" data-background-video-loop="true"
 					data-background-size="cover" data-background-video-muted="true">
-					Satelliten</section>
+					mehr Satelliten</section>
 
 				<section>Sternschnuppen</section>
 
@@ -103,7 +114,19 @@
 				<section data-auto-animate data-background-image="assets/data/neowise/neowise.jpg"
 					data-background-size="cover"></section>
 
-				<section>Mond</section>
+				<section data-background-color="black">Mond
+					<div class="galleryContainer">
+						<a class="galleryImageContained" href="assets/data/moon/GoldenerHenkel.jpg">
+							<div style="background-image:url('assets/data/moon/GoldenerHenkel.jpg');"></div>
+						</a>
+						<a class="galleryImageContained" href="assets/data/moon/mond.jpg">
+							<div style="background-image:url('assets/data/moon/mond.jpg')"></div>
+						</a>
+						<a class="galleryImageContained" href="assets/data/moon/mond2.jpg">
+							<div style="background-image:url('assets/data/moon/mond2.jpg')"></div>
+						</a>
+					</div>
+				</section>
 
 				<section data-background-image="assets/data/sun-path/sun.jpg" data-background-size="cover">
 					Sonnenlauf</section>
@@ -116,26 +139,36 @@
 				<section data-auto-animate data-auto-animate-unmatched="fade" data-background-color="black">
 					Sonne
 					<div class="galleryContainer">
-						<a class="galleryImage" href="assets/data/sun/sun_detail2.jpg">
-							<div style="background-image:url('assets/data/sun/sun_detail2.jpg')"></div>
-						</a>
 						<a class="galleryImage" href="assets/data/sun/sun_detail1.jpg">
 							<div style="background-image:url('assets/data/sun/sun_detail1.jpg')"></div>
+						</a>
+						<a class="galleryImage" href="assets/data/sun/sun_detail2.jpg">
+							<div style="background-image:url('assets/data/sun/sun_detail2.jpg')"></div>
 						</a>
 					</div>
 
 					<div class="alert">*Hier Sonnenwarnung einfügen*</div>
 				</section>
 
-				<section>
+				<section data-background-color="black">
 					Sonnenfinsternis
-					<video style="width:50%; height:50%" autoplay loop>
-						<source src="assets/data/sun/sun.mp4" type="video/mp4">
-					</video>
+					<div>
+						<video style="width:50%; height:50%;margin-top: 1em;" autoplay loop>
+							<source src="assets/data/sun/sun.mp4" type="video/mp4">
+						</video>
+					</div>
 				</section>
 
-				<section>Planeten</section>
-
+				<section data-background-color="black" >Planeten
+					<div class="galleryContainer">
+						<a class="galleryImageContained" href="assets/data/planets/jupiter.png">
+							<div style="background-image:url('assets/data/planets/jupiter.png')"></div>
+						</a>
+						<a class="galleryImage" href="assets/data/sun/sun_detail1.jpg">
+							<div style="background-image:url('assets/data/sun/sun_detail1.jpg')"></div>
+						</a>
+					</div>
+				</section>
 
 				<section>Deep Space (Galaxien), Nebel (Milchstraße, Andromeda, etc.)</section>
 				<section>Deep Space (Galaxien), Nebel (Milchstraße, Andromeda, etc.)</section>
